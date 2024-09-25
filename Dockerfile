@@ -9,8 +9,9 @@ RUN apt-get install -y git
 USER $MAMBA_USER
 
 #INSTANSEG
-RUN git clone https://github.com/instanseg/instanseg.git
+RUN git clone https://github.com/bethac07/instanseg.git
 WORKDIR instanseg
+RUN git checkout M1
 
 RUN micromamba create --file env.yml && micromamba clean --all --yes
 
